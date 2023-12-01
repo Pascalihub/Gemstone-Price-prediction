@@ -1,6 +1,8 @@
 numpy
 pandas
 matplotlib
+mlflow==2.2.2
+notebook
 seaborn
 scikit-learn
 python-box==6.0.2
@@ -16,3 +18,4 @@ flask
 flask_cors
 lime
 -e .
+
