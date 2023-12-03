@@ -3,6 +3,7 @@ from src.gemstone.components.data_ingestion import DataIngestion
 from src.gemstone.components.data_transformation import DataTransformation
 from src.gemstone.logger import logging
 
+STAGE_NAME = "Data transformation stage"
 
 class DataTransformationTrainingPipeline:
     def __init__(self):
@@ -13,3 +14,13 @@ class DataTransformationTrainingPipeline:
         data_transformation_config = config.get_data_transformation_config()
         data_transformation = DataTransformation(config=data_transformation_config)
         data_transformation.initiate_data_transformation()
+
+if __name__ == '__main__':
+    try:
+        logging.info(f">>>>>> stage {STAGE_NAME} started <<<<<<") 
+        data_ingestion = DataTransformationTrainingPipeline()
+        data_ingestion.main()
+        logging.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
+    except Exception as e:
+        logging.exception(e)
+        raise e

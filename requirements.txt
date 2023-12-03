@@ -1,5 +1,6 @@
 numpy
 pandas
+dvc
 matplotlib
 mlflow==2.2.2
 notebook

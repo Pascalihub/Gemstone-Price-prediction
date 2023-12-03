@@ -8,6 +8,7 @@ import pandas as pd
 from src.gemstone.entity.config_entity import DataValidationConfig
 
 
+
 class DataValiadtion:
     def __init__(self, config: DataValidationConfig):
         self.config = config
